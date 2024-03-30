@@ -1,0 +1,9 @@
+<hibernate-mapping package="org.example.data.entities">
+    <class name="Employee" table="employee_mysql">
+        <id name="id" type="int">
+            <generator class="native"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="salary" column="salary" type="int"/>
+    </class>
+</hibernate-mapping>

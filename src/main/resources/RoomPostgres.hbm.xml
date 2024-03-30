@@ -1,0 +1,13 @@
+<hibernate-mapping package="org.example.data.entities">
+    <class name="Room" table="room" >
+        <id name="roomId" type="int" column="room_id">
+            <generator class="increment">
+<!--                <param name="sequence">room_id_seq</param>-->
+            </generator>
+
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="buildingId" column="building_id" type="int"/>
+        <property name="comments" column="comments" type="string"/>
+    </class>
+</hibernate-mapping>
