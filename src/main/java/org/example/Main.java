@@ -16,15 +16,17 @@ public class Main {
         EmployeeDao employeeDao = new EmployeeDao(mysqlSessionFactory);
 
         Employee emp1 = new Employee();
-        emp1.setName("Agni");
+        emp1.setName("Agni2");
         emp1.setSalary(27000);
 
         Employee emp2 = new Employee();
-        emp2.setName("Brahmos");
+        emp2.setName("Brahmos2");
         emp2.setSalary(18000);
 
         employeeDao.saveEmployee(emp1);
         employeeDao.saveEmployee(emp2);
+
+        employeeDao.getEmployeeList("FROM Employee");
 
         //initialize mysql session factories
         ArrayList<SessionFactory> sessionFactoryList = new ArrayList<>();
@@ -37,11 +39,15 @@ public class Main {
         for(SessionFactory sessionFactory : sessionFactoryList){
             RoomDao roomDao = new RoomDao(sessionFactory);
             Room room1 = new Room();
-            room1.setName("Newton");
-            room1.setBuildingId(16);
-            room1.setComments("new rooms");
+            room1.setName("Newton2");
+            room1.setBuildingId(17);
+            room1.setComments("new rooms2");
             roomDao.saveRoom(room1);
+
+            roomDao.getRoomList("FROM Room");
         }
+
+
 
 //        RoomDao roomDao = new RoomDao(roomPostgresSessionFactory);
 //        Room room1 = new Room();
